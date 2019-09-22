@@ -1,0 +1,24 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "myEC2Instance": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "AvailabilityZone": "$AvailabilityZone",
+        "ImageId": "$ImageId",
+        "InstanceType": "t2.micro",
+        "KeyName": "$KeyName",
+        "SecurityGroupIds": [
+          "$SecurityGroupIds"
+        ],
+        "SubnetId": "$SubnetId",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "$AWS_STACK_NAME"
+          }
+        ]
+      }
+    }
+  }
+}
