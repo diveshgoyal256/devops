@@ -1,0 +1,24 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Resources": {
+    "myEC2Instance": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "AvailabilityZone": "us-east-1c",
+        "ImageId": "ami-0b69ea66ff7391e80",
+        "InstanceType": "t2.micro",
+        "KeyName": "HostnameKeyPair",
+        "SecurityGroupIds": [
+          "sg-0b2e1c79337a00442"
+        ],
+        "SubnetId": "subnet-a33d06e9",
+        "Tags": [
+          {
+            "Key": "Name",
+            "Value": "Jenkins-clfr1"
+          }
+        ]
+      }
+    }
+  }
+}
