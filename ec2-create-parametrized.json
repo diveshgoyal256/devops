@@ -4,18 +4,18 @@
     "myEC2Instance": {
       "Type": "AWS::EC2::Instance",
       "Properties": {
-        "AvailabilityZone": "$AvailabilityZone",
-        "ImageId": "$ImageId",
+        "AvailabilityZone": "${AvailabilityZone}",
+        "ImageId": "${ImageId}",
         "InstanceType": "t2.micro",
-        "KeyName": "$KeyName",
+        "KeyName": "${KeyName}",
         "SecurityGroupIds": [
-          "$SecurityGroupIds"
+          "${SecurityGroupIds}"
         ],
-        "SubnetId": "$SubnetId",
+        "SubnetId": "${SubnetId}",
         "Tags": [
           {
             "Key": "Name",
-            "Value": "$AWS_STACK_NAME"
+            "Value": "${AWS_STACK_NAME}"
           }
         ]
       }
