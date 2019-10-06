@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "diveshgoyal256/jenkins_aws"
-    registryCredential = ‘dockerhub’
+    registryCredential = 'dockerhub'
   }
   agent any
   stages {
